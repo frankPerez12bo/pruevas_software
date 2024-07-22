@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hipotenusa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Calculadora de Hipotenusa</h1>
+    <div class="container">
+        <label for="cateto1">Cateto 1:</label>
+        <br>
+        <input type="number" id="cateto1" required>
+        <br>
+        <label for="cateto2">Cateto 2:</label>
+        <br>
+        <input type="number" id="cateto2" required>
+        <br>
+        <button onclick="calcularHipotenusa()" class="btn">Calcular</button>
+        <br>
+        <p id="resultado"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

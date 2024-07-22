@@ -1,0 +1,45 @@
+*{
+    overflow: hidden;
+    margin: 0;
+}
+body{
+    background-image: url(https://images.playground.com/803ae61caa654d51b4a4507a742ef5f3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 87%;
+}
+h1{
+     background-color: black;
+     padding: 03vh 04vw;
+     color: white;
+     letter-spacing: 01vw;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     cursor: crosshair;
+     transition: 1300ms;
+}
+h1:hover{
+    opacity: 78%;
+    background-color: steelblue;
+}
+.container{
+    background-color:black;
+    padding: 04vh 05vw;
+    width: 20vw;
+    place-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    color: white;
+    gap: 02vh;
+}
+.btn{
+    background-color: yellow;
+    margin-top: 01vh;
+    margin-left: 02vw;
+    padding: .8em;
+    border-radius: 07px;
+    letter-spacing: .5vw;
+}
