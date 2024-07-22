@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Formulario de Login</title>
+</head>
+<body>
+  <form id="loginForm" method="post" action="" enctype="multipart/form-data">
+    <label for="nombre" >Usuario Nombre:</label>
+    <input oninput="capitalizeFirstLetter()" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*" type="text" id="nombre" minlength="3" maxlength="17" required>
+    
+    <label for="apellido">Usuario Apellido:</label>
+    <input oninput="capitalizeFirstLetterLastName()" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*" type="text" id="apellido" minlength="3" maxlength="17" required>
+    
+
+    <label for="autor">Autor</label>
+    <input required oninput="capitalizeFirstLetterAutorName()" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*" type="text" id="autor" name="autor">
+
+    <label for="password">Contraseña</label>
+    <input required type="password" name="password" id="password" minlength="7" maxlength="20">
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" min="1" max="120" required>
+    
+    <label for="identificacion">Identificación:</label>
+    <input type="number" id="identificacion" minlength="8" maxlength="8" min="60000000" max="91235875" required>
+    
+    <label for="sueldo">Precio :</label>
+    <input type="number" id="sueldo" minlength="2" maxlength="5" min="12" max="200" required>
+    
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script src="index.js"></script>
+  <script src="leter.js"></script>
+  <script>
+    document.getElementById('nombre').addEventListener('input', function () {
+      this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúñÑ ]/g, '');
+    });
+    
+    document.getElementById('apellido').addEventListener('input', function () {
+      this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúñÑ ]/g, '');
+    });
+    document.getElementById('autor'). addEventListener('input', function(){
+      this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúñÑ ]/g, '');
+
+    })
+    </script>
+</body>
+</html>
