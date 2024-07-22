@@ -1,0 +1,14 @@
+#tablaTransccion{
+    border:1px solid black;
+    caption-side: bottom;
+    border-collapse: collapse;
+    margin-bottom: 02vh;
+}
+tr,th,td{
+    border:1px solid black;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+thead,tbody{
+    border:1px solid black;
+}

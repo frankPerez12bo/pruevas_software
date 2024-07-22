@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <main class="main" id="main">
+        <section class="section" id="section">
+            <div class="spaceName" id="nameSpace">
+                <div class="container bg-warning py-5 text-center">
+                    <h1 style="text-decoration: underline;">TAREA</h1>
+                </div>
+            </div>
+            <article class="article" id="article">
+                <form  id="transtionForm" name="transtionForm" action="" method="post" class="container py-4 my-2 bg-info text-center">
+                    <section>
+                        <br>
+                        <label for="radio">INGRESO</label>
+                        <input checked required type="radio" name="tySelector" id="radio" value="ing">
+                        <br>
+                        <label for="radio1">EGRESO</label>
+                        <input  required type="radio" name="tySelector" id="radio1One" value="egr">
+                        <br>
+                        <label max-length="" min for="labelNombre">NOMBRES</label>
+                        <input oninput="capitalizeFirstLetter()" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*"  title="Ingresa solo texto" required style="margin-top: 02vh;" type="text" placeholder="NOMBRE" id="labelNombre"  class="" name="labelNombre" maxlength="30" minlength="3">
+                        <br>
+                        <label style="margin-top: 02vh;" for="labelApellido">APELLIDO</label>
+                        <input oninput="capitalizeFirstLetterLastName()" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*" title="Ingresa solo texto" required type="text" placeholder="APELLIDOS" id="labelApellido" class="" name="labelApellido" maxlength="30" minlength="8">
+                        <br>
+                        <label style="margin-top: 02vh;" for="labelDni">DNI</label>
+                        <input width="20px" required pattern="" type="number" placeholder="DNI" id="labelDni" class="" name="labelDni"  maxlength="8" minlength="8" min="60000000" max="80000000">
+                        <br>
+                        <label style="margin-top: 02vh;" for="labelSueldo">Sueldo</label>
+                        <input required width="20px" pattern="" type="number" placeholder="SUELDO" id="labelSueldo" class="" name="labelSueldo"  maxlength="3" minlength="5" min="100" max="99999">
+                        <br>
+                        <label for="labelEdad">EDAD</label>
+                        <input required max="120" min="1" type="number" name="labelEdad" id="labelEdad" placeholder="EDAD">
+
+                        <br>
+
+
+                        <!--<button aria-required=""  class="btn btn-warning my-4 py-2" id="sueldo" name="sueldo">SUELDO</button>-->
+                        <br>
+                        <input  required id="" name="register" type="submit" value="ENVIAR DATOS">
+                        <br>
+
+                        <button type="submit" name="" placeholder="ENVIO" value="ENVIAR"></button>
+                    </section>
+                    
+                </form>
+                <section id="sectionTable" style="width: 100vw;" class="container py-lg-3 text-center bg-success">
+                    <div id="tableSpce" class="container my-2">
+                    </div>
+                </section>
+            </article>
+            <article class="container bg-info py-2 my-3 text-center">
+                <div style="color: white;" class="container py-3 my-4 bg-secondary">
+                    <input type="file" name="" id="btnInsertar" onclick="insertarImage()" accept="image*/" multiple="true">
+                    <div class="container" id="spaceContainer">
+
+                    </div>
+                </div>
+            </article>
+        </section>
+        <table id="tablaTransccion" class="container">
+            <thead>
+                <tr class>
+                    <th>TIPO</th>
+                    <th>NOMBRES</th>
+                    <th>APELLIDOS</th>
+                    <th>DNI</th>
+                    <th>EDAD</th>
+                    <th>SUELDO</th>
+                    <th>SUELDO BRUTO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INGRESO</td>
+                    <td>Andres</td>
+                    <td>Santa Cruz</td>
+                    <td>7418569</td>
+                    <td>21</td>
+                    <td>15879</td>
+                    <td>u</td>
+                </tr>
+            </tbody>
+                
+        </table>
+        <div class="spacePrice" id="priceSueldo" name="nuevo">
+
+        </div>
+    </main>
+    <script src="indexLeter.js"></script>
+    <script src="nuvo.js"></script>
+    <script src="index.js"></script>
+    <script src="novoInput.js"></script>
+    <script>
+        document.getElementById('labelNombre').addEventListener('input', function () {
+          this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúñÑ ]/g, '');
+        });
+        
+        document.getElementById('labelApellido').addEventListener('input', function () {
+          this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúñÑ ]/g, '');
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
